@@ -1,0 +1,190 @@
+/* =========================================
+   1. Global Settings & Typography
+========================================= */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    padding-top: 76px; /* Offset for fixed navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Restricting the cursive font only to the brand name so it looks like a signature */
+.signature-brand {
+    font-family: "Playwrite AU VIC Guides", cursive;
+    font-size: 1.8rem !important;
+}
+
+/* =========================================
+   2. Colors & Backgrounds
+========================================= */
+.section-bg-white {
+    background-color: #ffffff;
+}
+
+.section-bg-light {
+    background-color: rgb(46, 139, 130); /* Very soft, professional light blue-grey */
+}
+
+.contact-section {
+    background-color: #3c2867; /* Modern professional dark slate */
+}
+
+.footer-dark {
+    background-color: #490e4b; /* Darker than contact section for depth */
+}
+
+/* =========================================
+   3. Custom Utility Classes
+========================================= */
+.section-title {
+    font-weight: 700;
+    color: #1a202c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.title-line {
+    width: 60px;
+    height: 4px;
+    background-color: #198754;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+/* =========================================
+   4. Navbar Styling (Glassmorphism)
+========================================= */
+.custom-navbar {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    color: #4a5568 !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: #198754 !important;
+}
+
+/* =========================================
+   5. Carousel / Hero Section
+========================================= */
+.carousel-item {
+    height: 85vh;
+    position: relative;
+}
+
+/* Adds a dark gradient overlay so text is always readable */
+.carousel-item .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    z-index: 2;
+    bottom: 25%;
+}
+
+.slide-up-animation {
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   6. UI Components & Hover Effects
+========================================= */
+/* About Image */
+.profile-img {
+    max-height: 450px;
+    object-fit: cover;
+    border: 8px solid white;
+}
+
+/* Cards Hover Effect */
+.hover-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hover-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* Small Lift Effect for soft skills */
+.hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08) !important;
+    border-color: #198754 !important;
+}
+
+/* Progress Bars */
+.custom-progress {
+    height: 10px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+}
+
+.custom-progress .progress-bar {
+    border-radius: 10px;
+}
+
+/* Project & Gallery Images */
+.project-img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.gallery-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-img {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   7. Contact Form
+========================================= */
+.custom-input {
+    background-color: #f8faff;
+    border: 1px solid #e2e8f0;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+    background-color: #ffffff;
+    border-color: #198754;
+    box-shadow: 0 0 0 4px rgba(25, 135, 84, 0.1);
+}
